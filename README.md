@@ -5,13 +5,8 @@
 * [Contents](#content)
 
 ## General Info
-<<<<<<< HEAD
-This browser based web application to ...
-	Team 46's BeatCST
-=======
 Paul Seong Uk Yeon was here! I'm going to be doing the assignment.html
-	
->>>>>>> 8f49e432c63a56d4cb096f548ee7b0793de08d46
+
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
