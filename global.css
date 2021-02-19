@@ -20,6 +20,12 @@ nav {
 
 }
 
+.navbar-toggler {
+
+	color: #fff;
+
+}
+
 nav a {
 
 	color: #fff !important;
