@@ -5,7 +5,7 @@
 * [Contents](#content)
 
 ## General Info
-This browser based web application to ...
+Paul Seong Uk Yeon was here! I'm going to be doing the assignment.html
 	
 ## Technologies
 Technologies used for this project:
