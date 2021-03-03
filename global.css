@@ -7,12 +7,14 @@ body {
 
 }
 
+/*The nav bar styles*/
+
 nav {
 
 	background-color: #065077;
 }
 
-.navbar-brand {
+.header-logo {
 
 	font-size: 2.5em;
 	font-family: 'Permanent Marker', cursive;
@@ -31,4 +33,59 @@ nav a {
 	color: #fff !important;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
+}
+
+/*header image, with parallax effect*/
+
+.parallax-header-img {
+
+  background-image: url(images/study.jpg);
+  height: 20em;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+/*The welcome text under the nav*/
+.welcome {
+
+	margin-top: 0.5em;
+
+}
+
+/*Accordion styles for calendar*/
+.calendar-accordion, .calendar-accordion:focus, .calendar-accordion:not(.collapsed) {
+
+	background-color: #1c4966; 
+	color: #fff;
+}
+
+.calendar-accordion::after {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.1em;
+    margin-left: auto;
+    text-align: center;
+    content: "";
+    background-image: url(images/accordionbutton.svg);
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out;
+}
+
+.calendar-accordion:not(.collapsed)::after {
+    background-image: url(images/accordionbutton.svg);
+    transform: rotate(180deg);
+}
+
+
+/*centers footer*/
+.footer-link{
+
+	text-align: center;
+	margin: 0 auto;
 }
