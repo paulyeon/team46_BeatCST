@@ -1,3 +1,32 @@
-.accordian {
-  margin: 30px;
+/*Accordion styles for calendar*/
+.calendar-accordion, .calendar-accordion:focus, .calendar-accordion:not(.collapsed) {
+
+	background-color: #1c4966;
+	color: #fff;
+}
+
+.calendar-accordion::after {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.1em;
+    margin-left: auto;
+    text-align: center;
+    content: "";
+    background-image: url(images/accordionbutton.svg);
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out;
+}
+
+.calendar-accordion:not(.collapsed)::after {
+    background-image: url(images/accordionbutton.svg);
+    transform: rotate(180deg);
+}
+
+.fixed-footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
