@@ -1,7 +1,7 @@
 /*Accordion styles for calendar*/
 .calendar-accordion, .calendar-accordion:focus, .calendar-accordion:not(.collapsed) {
 
-	background-color: #1c4966; 
+	background-color: #1c4966;
 	color: #fff;
 }
 
