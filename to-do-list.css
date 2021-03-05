@@ -23,3 +23,14 @@
     background-image: url(images/accordionbutton.svg);
     transform: rotate(180deg);
 }
+
+.parallax-header-img {
+
+  background-image: url(images/circles.jpg);
+  height: 20em;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
