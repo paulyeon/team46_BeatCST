@@ -23,10 +23,3 @@
     background-image: url(images/accordionbutton.svg);
     transform: rotate(180deg);
 }
-
-.fixed-footer{
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
