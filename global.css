@@ -48,6 +48,17 @@ nav a {
 
 }
 
+.parallax-header-img-assignments {
+
+	background-image: url(images/assignment_parallax.jpg);
+	height: 20em;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  
+  }
+
 
 /*The welcome text under the nav*/
 .welcome {
