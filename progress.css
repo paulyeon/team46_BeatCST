@@ -1,0 +1,16 @@
+.tableName {
+    font-size: 80%;
+}
+
+.tableProgress {
+    font-size: 80%;
+}
+
+.progress {
+    width: 65%;
+}
+
+.divFlex {
+    display: flex;
+    justify-content: flex-end;
+}
