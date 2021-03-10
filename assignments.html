@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Assignments</title>
+    <title>BeatCST</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -11,7 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="./global.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <link rel="stylesheet" type="text/css" href="assignments.css">
 
     <!-- Optional styles and scripts of your own -->
 
@@ -43,7 +45,8 @@
                         <a class="nav-link" href="to-do-list.html">To-Do List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="assignments.html" tabindex="-1" aria-disabled="true">Track Assignments</a>
+                        <a class="nav-link disabled" href="assignments.html" tabindex="-1" aria-disabled="true">Track
+                            Assignments</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Grades</a>
@@ -66,65 +69,125 @@
         <p>
             <h4>This is Paul, and it's the tentative assignment page.</h4>
             <br>
-            The page will list out all the current assignments and their current progresses. It will have two buttons on top where you will be able to navigate to to different page.
+            The page will list out all the current assignments and their current progresses. It will have two buttons on
+            top where you will be able to navigate to to different page.
 
         </p>
     </div>
-
-    <div class="container" style="text-align: center;">
-            <button type="button" class="btn btn-secondary">Assignments list</button>
-            <button type="button" class="btn btn-secondary">Progress tracker</button>
+    <div class="container">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="nav-item">
+                <a class="nav-link" href="progress.html">Progresses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page">Assignments</a>
+            </li>
+        </ul>
     </div>
 
-
     <div class="container">
-        <div class="row g-2">
-            <div class="col-6">
-                <div class="p-3 border bg-light" style="text-align: center;">Assignments</div>
-            </div>
-            <div class="col-6">
-                <div class="p-3 border bg-light" style="text-align: center;">Progress</div>
-            </div>
-            <div class="col-6">
-                <div class="p-3 border bg-light">
-                    <ul>
-                        <li style="display: inline">assignment 1</li>
-                    </ul>
+        <input class="form-control" type="text" placeholder="Search" id="searchInput">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item" class="assignmentsSearch">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button calendar-accordion collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                        aria-controls="collapseOne">
+                        COMP 1800 - Tech-mini 4
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Course Name: </strong>COMP 1800
+                        <br>
+                        <strong>Assignment Name: </strong>Tech-mini 4
+                        <br>
+                        <strong>Assigned On: </strong>March 9th, 2021
+                        <br>
+                        <strong>Due Date: </strong>March 9th, 2022
+                        <br>
+                        <strong>Status: </strong>In Progress
+                        <br><br><br>
+                        <div class="assignmentsEditDeleteButton">
+                            <div>
+                                <button type="button" class="btn btn-outline-dark btn-sm"
+                                    class="assignmentsEditButton">Edit</button>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-outline-dark btn-sm"
+                                    class="assignmentsDeleteButton">Delete</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="p-3 border bg-light">
-                    <ul>
-                        <li style="display: inline">progress report</li>
-                    </ul>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button calendar-accordion collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            Course Name: COMP 1113
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Course Name: </strong>COMP 1113
+                            <br>
+                            <strong>Assignment Name: </strong>Miniquiz 7
+                            <br>
+                            <strong>Assigned On: </strong>March 7th, 2021
+                            <br>
+                            <strong>Due Date: </strong>March 23th, 2021
+                            <br>
+                            <strong>Status: </strong>Done
+                            <br><br><br>
+                            <div class="assignmentsEditDeleteButton">
+                                <div>
+                                    <button type="button" class="btn btn-outline-dark btn-sm"
+                                        class="assignmentsEditButton">Edit</button>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-outline-dark btn-sm"
+                                        class="assignmentsDeleteButton">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="p-3 border bg-light">
-                    <ul>
-                        <li style="display: inline">assignment 2</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="p-3 border bg-light">
-                    <ul>
-                        <li style="display: inline">progress report</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="p-3 border bg-light">
-                    <ul>
-                        <li style="display: inline">assignment 3</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="p-3 border bg-light">
-                    <ul>
-                        <li style="display: inline">progress report</li>
-                    </ul>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button calendar-accordion collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                            COMP 1510: A4
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Course Name: </strong>COMP 1510
+                            <br>
+                            <strong>Assignment Name: </strong>A4
+                            <br>
+                            <strong>Assigned On: </strong>March 3rd, 2021
+                            <br>
+                            <strong>Due Date: </strong>March 31th, 2022
+                            <br>
+                            <strong>Status: </strong>Submitted
+                            <br><br><br>
+                            <div class="assignmentsEditDeleteButton">
+                                <div>
+                                    <button type="button" class="btn btn-outline-dark btn-sm"
+                                        class="assignmentsEditButton">Edit</button>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-outline-dark btn-sm"
+                                        id="assignmentsDeleteButton">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,10 +207,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Type to filter jQuery -->
+    <script>
+        $(document).ready(function () {
+            $("#searchInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $(".accordion *").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
+    <script>
+        var deleteButton = document.getElementById("assignmentsDeleteButton");
+        var deleteAssignment = document.getElementsByClassName('accordion-item');
+        deleteButton.addEventListener('click', function() {
+            while (deleteAssignment.firstChild) {
+                deleteAssignment.removeChild(deleteAssignment.firstChild);
+        }});
+    </script>
 
 </body>
 
