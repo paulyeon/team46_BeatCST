@@ -13,9 +13,16 @@
     <title>BeatCST</title>
   </head>
   <body>
-    <div class="container logo-container">
-      <img src="images/beatcst_placeholder_logo_white.png" alt="BeatCST logo">
+    <div class="container calendar-nav">
+      <button id="back-button" onclick="goBack()"><img src="images/backbutton.svg" alt="back button"></button>
+      <h1>Homework Solutions</h1>
     </div>
+
+    <div class="container">
+      <hr>
+    </div>
+
+
 
     <div class="container course-selection">
       <div class="dropdown">
@@ -28,7 +35,7 @@
           <li><a class="dropdown-item" href="#">COMP 1113</a></li>
         </ul>
       </div>
-      <button class="btn next-button">Next</button>
+      <a href="each-course-solutions.html"><button class="btn next-button">Next</button></a>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
   <nav class="navbar fixed-bottom">
@@ -72,6 +79,10 @@
         document.getElementById("dropdownMenuButton1").innerHTML = self.innerHTML;
       }
     </script>-->
-
+    <script>
+      function goBack() {
+        window.history.back();
+         }
+    </script>
   </body>
 </html>
