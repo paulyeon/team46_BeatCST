@@ -28,6 +28,7 @@ img {
     width: 1em;
     height: 1em;
     margin: 0.5em;
+    padding: 0em;
 }
 
 .calendar-nav {
@@ -44,9 +45,18 @@ img {
     height: 4rem;
     font-size: 0.9em;
     padding: 0.7em 1.2em;
+    align-items: center;
   }
 
-  .navbar-options img{
+.navbar-options img{
     width: 1.5em;
     height: 1.5em;
-  }
+    margin: 0em;
+}
+
+.navbar-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
