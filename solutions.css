@@ -1,0 +1,20 @@
+img {
+  max-width: 100%
+}
+
+.course-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-toggle {
+  background-color: #1a2b3d;
+}
+
+.next-button {
+  margin: 2rem;
+  background-color: #94d7d2;
+  color: #1a2b3d;
+}
