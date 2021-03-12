@@ -42,7 +42,13 @@ img {
 
 #back-button {
 
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    overflow: hidden;
+    outline:none;
+
 
 }
 
