@@ -22,6 +22,50 @@
 
 <body>
 
+    <!-- Add New Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="course-name" class="col-form-label">Course Name</label>
+                            <input type="text" class="form-control" id="course-name" placeholder="COMP ####" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="assignment-name" class="col-form-label">Assignment Name</label>
+                            <input type="text" class="form-control" id="assignment-name" placeholder="Lab 04" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="assigned-date" class="col-form-label">Assigned On</label>
+                            <input type="date" class="form-control" id="assigned-date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="due-date" class="col-form-label">Due Date</label>
+                            <input type="date" class="form-control" id="due-date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="assignment-status" class="col-form-label">Status</label>
+                            <select class="form-select" id="assignment-status" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option>In Progress</option>
+                                <option>Needs Review</option>
+                                <option>Completed</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark btn-sm">Add to Assignments</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-------------------------------------->
     <!-- The following is HTML for layout -->
     <!-------------------------------------->
@@ -59,21 +103,21 @@
         </div>
     </nav>
 
-    <div class="parallax-header-img-assignments">
+    <!-- Parallax Header and Image -->
+    <div class="parallax-header-img-assignments"></div>
 
-    </div>
-
+    <!-- Introduction to Page -->
     <div class="container">
-
         <h1 class="display-4 welcome">Hello, Set F student!</h1>
         <p>
             <h4>This is Paul, and it's the tentative assignment page.</h4>
             <br>
             The page will list out all the current assignments and their current progresses. It will have two buttons on
             top where you will be able to navigate to to different page.
-
         </p>
     </div>
+
+    <!-- Navbar to switch back and forth from Progresses and Assignments-->
     <div class="container">
         <ul class="nav nav-tabs nav-justified">
             <li class="nav-item">
@@ -84,11 +128,23 @@
             </li>
         </ul>
     </div>
+
+    <!-- Search Input to Filter Items by Accordion Item(The header) -->
     <div class="container">
         <div>
             <input class="form-control" type="text" placeholder="Search" id="searchInput">
-        <div>
-        <button type="button" onclick="location.href='addnew.html'" class="btn btn-outline-dark btn-sm" id="assignmentsAddNewButton">Add New</button>
+            <div>
+                <!-- Button to trigger Modal pop up-->
+                <button type="button" class="btn btn-outline-dark btn-sm" id="assignmentsAddNewButton"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Add New Assignment">Add
+                    New</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Harded coded Accordions for reference and demo. New entries will be put inside this div class="container" -->
+    <div class="container">
+        <!-- This div class="accordion will be made each time a new entry is submitted."-->
         <div class="accordion" id="accordionExample">
             <div class="accordion-item" class="assignmentsSearch">
                 <h2 class="accordion-header" id="headingOne">
@@ -101,86 +157,81 @@
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>Course Name: </strong>COMP 1800
-                        <br>
-                        <strong>Assignment Name: </strong>Tech-mini 4
-                        <br>
-                        <strong>Assigned On: </strong>March 9th, 2021
-                        <br>
-                        <strong>Due Date: </strong>March 9th, 2022
-                        <br>
-                        <strong>Status: </strong>In Progress
-                        <br><br>
+                        <p><strong>Course Name: </strong>COMP 1800</p>
+                        <p><strong>Assignment Name: </strong>Tech-mini 4</p>
+                        <p><strong>Assigned On: </strong>March 9th, 2021</p>
+                        <p><strong>Due Date: </strong>March 9th, 2022</p>
+                        <p><strong>Status: </strong>In Progress</p>
                         <div class="assignmentsEditDeleteButton">
                             <div>
-                                <button type="button" class="btn btn-outline-dark btn-sm assignmentsEditButton">Edit</button>
+                                <button type="button"
+                                    class="btn btn-outline-dark btn-sm assignmentsEditButton">Edit</button>
                             </div>
                             <div>
-                                <button type="button" class="btn btn-outline-dark btn-sm assignmentsDeleteButton">Delete</button>
+                                <button type="button"
+                                    class="btn btn-outline-dark btn-sm assignmentsDeleteButton">Delete</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button calendar-accordion collapsed" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                            aria-controls="collapseTwo">
-                            COMP 1113 - Miniquiz 7
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Course Name: </strong>COMP 1113
-                            <br>
-                            <strong>Assignment Name: </strong>Miniquiz 7
-                            <br>
-                            <strong>Assigned On: </strong>March 7th, 2021
-                            <br>
-                            <strong>Due Date: </strong>March 23th, 2021
-                            <br>
-                            <strong>Status: </strong>Done
-                            <br><br>
-                            <div class="assignmentsEditDeleteButton">
-                                <div>
-                                    <button type="button" class="btn btn-outline-dark btn-sm assignmentsEditButton">Edit</button>
-                                </div>
-                                <div>
-                                    <button type="button" class="btn btn-outline-dark btn-sm assignmentsDeleteButton">Delete</button>
-                                </div>
+            </div>
+        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button calendar-accordion collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                        aria-controls="collapseTwo">
+                        COMP 1113 - Miniquiz 7
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p><strong>Course Name: </strong>COMP 1113</p>
+                        <p><strong>Assignment Name: </strong>Miniquiz 7</p>
+                        <p><strong>Assigned On: </strong>March 7th, 2021</p>
+                        <p><strong>Due Date: </strong>March 23th, 2021</p>
+                        <p><strong>Status: </strong>Done</p>
+                        <div class="assignmentsEditDeleteButton">
+                            <div>
+                                <button type="button"
+                                    class="btn btn-outline-dark btn-sm assignmentsEditButton">Edit</button>
+                            </div>
+                            <div>
+                                <button type="button"
+                                    class="btn btn-outline-dark btn-sm assignmentsDeleteButton">Delete</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button calendar-accordion collapsed" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                            aria-controls="collapseThree">
-                            COMP 1510 - A4
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Course Name: </strong>COMP 1510
-                            <br>
-                            <strong>Assignment Name: </strong>A4
-                            <br>
-                            <strong>Assigned On: </strong>March 3rd, 2021
-                            <br>
-                            <strong>Due Date: </strong>March 31th, 2022
-                            <br>
-                            <strong>Status: </strong>Needs Review
-                            <br><br>
-                            <div class="assignmentsEditDeleteButton">
-                                <div>
-                                    <button type="button" class="btn btn-outline-dark btn-sm assignmentsEditButton">Edit</button>
-                                </div>
-                                <div>
-                                    <button type="button" class="btn btn-outline-dark btn-sm assignmentsDeleteButton">Delete</button>
-                                </div>
+            </div>
+        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button calendar-accordion collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                        aria-controls="collapseThree">
+                        COMP 1510 - A4
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p><strong>Course Name: </strong>COMP 1510</p>
+                        <p><strong>Assignment Name: </strong>A4</p>
+                        <p><strong>Assigned On: </strong>March 3rd, 2021</p>
+                        <p><strong>Due Date: </strong>March 31th, 2022</p>
+                        <p><strong>Status: </strong>Needs Review</p>
+                        <div class="assignmentsEditDeleteButton">
+                            <div>
+                                <button type="button"
+                                    class="btn btn-outline-dark btn-sm assignmentsEditButton">Edit</button>
+                            </div>
+                            <div>
+                                <button type="button"
+                                    class="btn btn-outline-dark btn-sm assignmentsDeleteButton">Delete</button>
                             </div>
                         </div>
                     </div>
@@ -191,6 +242,7 @@
 
     <br></br>
 
+    <!-- Footer -->
     <footer class="footer mt-auto py-3 bg-dark">
         <div class="container">
             <a href="#" class="footer-link">BeatCST ©2021 Team 46</a>
@@ -205,17 +257,59 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <!-- Type to filter jQuery -->
+    <!-- Type to filter for Search Bar (jQuery) -->
     <script>
         $(document).ready(function () {
             $("#searchInput").on("keyup", function () {
                 var value = $(this).val().toLowerCase();
-                $(".accordion *").filter(function () {
+                $(".accordion-item").filter(function () {
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });
         });
     </script>
+
+    <!-- Validates modal input -->
+    <!-- <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script> -->
+    <!-- Open Add-New button Modal -->
+    <!-- <script>
+        var exampleModal = document.getElementById('exampleModal')
+        exampleModal.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var addNew = button.getAttribute('data-bs-whatever')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var modalTitle = exampleModal.querySelector('.modal-title')
+            var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+            modalTitle.textContent = addNew
+        })
+    </script> -->
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
