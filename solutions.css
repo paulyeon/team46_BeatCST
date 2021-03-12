@@ -16,7 +16,7 @@
 }
 
 .navbar {
-    
+
     flex: 0 0 auto;
     background-color: #1a2b3d;
     color: #fff;
@@ -37,4 +37,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.logo-container img {
+  max-width:100%;
 }
