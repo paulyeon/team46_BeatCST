@@ -25,12 +25,28 @@
 }
 
 img {
-    max-width: 100%;
-  }
+    width: 1em;
+    height: 1em;
+    margin: 0.5em;
+}
 
 .calendar-nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
+
+.navbar {
+    flex: 0 0 auto;
+    background-color: #1a2b3d;
+    color: #fff;
+    height: 4rem;
+    font-size: 0.9em;
+    padding: 0.7em 1.2em;
+  }
+
+  .navbar-options img{
+    width: 1.5em;
+    height: 1.5em;
+  }
