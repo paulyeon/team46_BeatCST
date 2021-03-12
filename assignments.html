@@ -66,68 +66,14 @@
         </div>
     </div>
 
-    <!-------------------------------------->
-    <!-- The following is HTML for layout -->
-    <!-------------------------------------->
-    <!-- Header Navigation Bar -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <a class="navbar-brand header-logo" href="#">BeatCST</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="calendar.html">Calendar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="to-do-list.html">To-Do List</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="assignments.html" tabindex="-1" aria-disabled="true">Track
-                            Assignments</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Grades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Homework Solutions</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
-
-    <!-- Introduction to Page -->
-    <div class="container">
-        <h1 class="display-4 welcome">Hello, Set F student!</h1>
-        <p>
-            <h4>This is Paul, and it's the tentative assignment page.</h4>
-            <br>
-            The page will list out all the current assignments and their current progresses. It will have two buttons on
-            top where you will be able to navigate to to different page.
-        </p>
-    </div>
-
-    <!-- Navbar to switch back and forth from Progresses and Assignments-->
-    <div class="container">
-        <ul class="nav nav-tabs nav-justified">
-            <li class="nav-item">
-                <a class="nav-link" href="progress.html">Progresses</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page">Assignments</a>
-            </li>
-        </ul>
+    <div class="container assignment-nav">
+        <button id="back-button" onclick="goBack()"><img src="images/backbutton.svg" alt="back button"></button>
+        <h1>Assignments</h1>
     </div>
 
     <!-- Search Input to Filter Items by Accordion Item(The header) -->
     <div class="container">
+        <hr>
         <div>
             <input class="form-control" type="text" placeholder="Search" id="searchInput">
             <div>
@@ -240,11 +186,24 @@
     <br></br>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 bg-dark">
-        <div class="container">
-            <a href="#" class="footer-link">BeatCST ©2021 Team 46</a>
+    <nav class="navbar fixed-bottom">
+        <div class="navbar-options">
+            <img src="nav-bar-icons/ic_date_range_24px.svg" alt="Calendar Icon">
+            <p>Calendar</p>
         </div>
-    </footer>
+        <div class="navbar-options">
+            <img src="nav-bar-icons/ic_create_24px.svg" alt="Assignments Icon">
+            <p>Assignments</p>
+        </div>
+        <div class="navbar-options">
+            <img src="nav-bar-icons/ic_star_24px.svg" alt="Grades Icon">
+            <p>Grades</p>
+        </div>
+        <div class="navbar-options">
+            <img src="nav-bar-icons/ic_vpn_key_24px.svg" alt="Solutions Icon">
+            <p>Solutions</p>
+        </div>
+    </nav>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -266,6 +225,11 @@
         });
     </script>
 
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
     <!-- Validates modal input -->
     <!-- <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields

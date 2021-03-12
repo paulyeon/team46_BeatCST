@@ -31,8 +31,8 @@
 
 .calendar-accordion, .calendar-accordion:focus, .calendar-accordion:not(.collapsed) {
 
-	background-color: #1c4966;
-	color: #fff;
+	background-color: #94d7d2;
+	color: #1a2d3b;
 }
 
 .calendar-accordion::after {
@@ -52,4 +52,57 @@
 .calendar-accordion:not(.collapsed)::after {
     background-image: url(images/accordionbutton.svg);
     transform: rotate(180deg);
+}
+
+
+img {
+    width: 1em;
+    height: 1em;
+    margin: 0.5em;
+    padding: 0em;
+}
+
+#back-button {
+    margin-bottom: 0.5em;
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    overflow: hidden;
+    outline:none;
+}
+
+.assignment-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: -0.75em;
+}
+
+#assignment-nav-header {
+    font-size: 1.5em;
+}
+
+.navbar {
+    flex: 0 0 auto;
+    background-color: #1a2b3d;
+    color: #fff;
+    height: 4rem;
+    font-size: 0.9em;
+    padding: 0.7em 1.2em;
+    align-items: center;
+  }
+
+.navbar-options img{
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0em;
+}
+
+.navbar-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
