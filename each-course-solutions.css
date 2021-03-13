@@ -50,8 +50,13 @@ img {
 
 body {
   color: #1d2b3a;
+
 }
 
-.name-row {
+h2 {
   background-color: #94d7d2;
+}
+
+.content {
+  padding: 0.5em
 }
